@@ -1,5 +1,5 @@
 # Hanover Diabetes Education and Engagement Program: Predictions for Prevention and Intervention
-
+![image.png](attachment:image.png)!
 Final Project Submission
 
 Author: Deon durrant
@@ -98,8 +98,7 @@ Descriptive Statistics
 
 **Demographic distribution**
     
-![png](output_20_0.png)
-
+![alt text](image.png)
 ## Demographic distribution
 - Age: Age ranges from 18-80 years with he highest frequency appears around the central bins range 8 - 10, highest peak reflecting a strong concentration of individuals 55-69 years old.
 - Gender: There is a  slight gender imbalance in datasets with women outnumbering men 56% to 44%
@@ -108,7 +107,7 @@ Descriptive Statistics
 **Health indicators  distribution**
 
 # BMI Distribution
-![png](output_24_0.png)
+![alt text](image-2.png)
 ## Health indicators distribution
 - BMI:The variable's right-skewed nature suggests potential outliers, most BMI falls bewteen 20-40. 
 - Smoker:   there are more Non-Smokers than Smokers in the dataset
@@ -118,7 +117,7 @@ Descriptive Statistics
 
 ## Diabetes  distribution**
 
-![png](output_29_0.png)
+![alt text](image-1.png)
     
 **Diabetes distribution analysis**
 The dataset reveals a significant class imbalance in the Diabetes_012 variable:
@@ -136,12 +135,6 @@ The dataset reveals a significant class imbalance in the Diabetes_012 variable:
 specifically  classifiers which are are sensitive to class distribution.
 
 - **Solution**: Due to the importance of risk assessment and prediction of at-risk and diabetic groups, to address the imbalance issues resampling method such as SMOTE (Synthetic Minority Over-sampling Technique) will be considered.
-
-
-# Income  level diabetes  distribution
-![png](output_32_1.png) 
-**Income level Diabetes Distribution Analysis**
-Higher income groups have a lower proportion of Pre-Diabetics and Diabetics    
 
 
 # Education and Diabetes Status Distribution
@@ -190,7 +183,7 @@ This table showcases the distribution of diabetes status (`Diabetes_012`) across
 - At education level 1.0, 27.0% are Diabetic, dropping to 9.6% at level 6.0.. 
 
 # Features correlation analysis
-![png](output_40_1.png)
+![alt text](image-3.png)
 ## **Features Correlation Analysis**
 - Notable Positive Correlations: highBp & HighCchol, age 
 - Notable Negative Correlations:genHlth income education
@@ -204,11 +197,6 @@ This table showcases the distribution of diabetes status (`Diabetes_012`) across
 - Perform a standard train-test split.
 - Assign 20% to the test set
 - Set random_state ensuring that the split is reproducible
-
-Description: 
-- Both Diabetes and Pre-Diabetes are grouped into one category (Diabetes) indicating blood glucose conditions, with Non-Diabetes as the second category.
-- Early Detection Focus: This grouping could be useful if the primary goal is to flag anyone at risk of diabetes, including those in the pre-diabetic stage.
-- Preventive Action: This approach supports early intervention because it treats both diabetic and pre-diabetic as high-risk groups, prompting similar preventive measures.
 
 **Feature engineer composite scores**
 
@@ -279,8 +267,7 @@ Combine four individual health indictors and provide an aggegate of the individu
 *  Easy to evaluate variable importance or feature contributions to model predictions 
 * Reduce risk of overfitting, enhancing the model's generalizability
 
-  
-![png](output_96_0.png)
+**Model hyperparameter tuning**
 
 **Key Metric comparison **
 
@@ -311,6 +298,7 @@ To address the business problem SHAP technique will be used to provide:
     - Identify the most influential features for predictions.
     - Detect irrelevant or redundant features.
 - Rich visualization providing intuitive plots to interpret model 
+
 **SHAP Fidelity**
 - measures the alignment between the SHAP-based reconstruction of predictions and the actual model predictions
 - evaluate the max descrepancy on full data set 
@@ -326,7 +314,7 @@ To address the business problem SHAP technique will be used to provide:
 ### Summary
 The observed maximum discrepancies are extremely small, confirming high fidelity. The SHAP values successfully reconstruct the model’s predictions to within floating-point precision limits.
 
-- ** Fidelity Mean Absolute Error (MAE)**
+** Fidelity Mean Absolute Error (MAE)**
 - The Mean Absolute Error (MAE) =0.0.
 - High Fidelity: The SHAP explanations are highly faithful to the model's predictions and confirms that the SHAP values correctly explain the contribution of each feature to the prediction.
 
@@ -334,14 +322,14 @@ The observed maximum discrepancies are extremely small, confirming high fidelity
 # Display feature importance 
 
     
-![png](output_107_0.png)
+![alt text](image-4.png)
     
   
 
 Beeswarm plot  to display the information-dense summary of how the top features in the  dataset impact the model’s output
 
     
-![png](output_110_0.png)
+![alt text](image-5.png)
     
 
 ## Analysis
@@ -367,104 +355,11 @@ Lifestyle_score, Health_AccessEngagement_Score, and HeartDiseaseorAttack have sm
 
 ## Examine Feature Interactions
 
-Feature Interaction: Use SHAP dependence plots to explore interactions between **high importance** features 
+ SHAP dependence plots to explore interactions between high importance,moderate importance  and low importance features. 
 
-![png](output_113_0.png)
-    
-**BMI**
-- There is  a non-linear and feature-interactive relationship between BMI and the model's predictions. 
--  BMI has a positive contribution up to a certain threshold but declines thereafter
-Feature Interaction 
--  BMI interacts with the comorbid feature to influence predictions. 
-    - High BMI combined with high glucose levels (pink) may contribute negatively to the outcome (e.g., risk of diabetes).
-    - Low BMI combined with low glucose levels (blue) may contribute positively to a favorable outcome.
-- The interaction between BMI and the comorbid feature appears non-linear, with significant effects in the extremes of both features.
-- BMI may not always serve as a protection feature and can be overridden by high cormorbid elements.
-
-    
-![png](output_116_0.png)
-    
-**OverallHealth_Score**
-- Increasing OverallHealth_Score (positive SHAP values),  pushes the model’s predictions toward diabetic status (or higher risk).
-- Low OverallHealth_Score Indicates better health conditions(lower scores negative SHAP values)  pushes predictions toward non-diabetes (or lower risk).
-Feature Interactions:
-- non-linear relationship  with the effect of poor health intensifying at higher scores.
-- High comorbid feature values (pink) amplify risk at poorer health levels, while low comorbid feature values (blue) mitigate it
-- The color gradient  suggest that the impact of poor health is influenced  by additional health or demographic factors.
-- Taliored intervention strategies for individuals with poor overall health but low levels of a specific comorbid condition (blue points) 
-
-![png](output_119_0.png)
-    
-**Comorbid_rating**
-
-- The SHAP values for Comorbid_rating  increase as the comorbid rating itself increases indicating a strong positive contribution to the predictions of diabetic status. 
-Feature Interactions:
-- A high Comorbid_rating combined with a low interacting feature (blue)seems to  moderate SHAP values, as the protective effect of the interacting feature offsets the severity of comorbidities.
--  high Comorbid_rating combined with a high interacting feature (pink) produces the strongest SHAP values, indicating maximum contribution to risk.
-
-# Use SHAP dependence plots to explore interactions between **moderate  importance** features
-moderate_features = ['HighBP', 'Income', 'HighChol']  
-  
-![png](output_121_0.png)
-    
-![png](output_121_1.png)
-    
-![png](output_121_2.png)
-    
-
-# Moderate Importance 
-**HighBP**
-- HighBP increases predictions, indicating its role as a risk factor for diabetes while the absennce of HighBp decreases predictions, showing it as a protective factor.
-- The impact of HighBP is moderated by interactions with other features such as comorbid features
-**Income**
-- At higher incomes diabetic status predictions are lower and income serves as a protection factor. However lower income increases predictions and serves as a  risk factors for diabetes,
-- At lower income levels the variability in SHAP values suggests that income interacts with another features  such as OverallHealth_Score amplifing the effect of low income on predictions.
-**HighChol**
-- The presence of high cholesterol Increases the likelihood of diabetes, contributing positively to predictions while the absence of HighChol reduces the likelihood of diabetes, contributing negatively to predictions.
-- The effect of high cholesterol is moderated or amplified by another features. 
-
-
-# Use SHAP dependence plots to explore interactions between **low  importance** features
-low_features = ['Sex', 'MentHlth', 'Education','Healthy_Eating_Score','Lifestyle_score','Health_AccessEngagement_Score', 'HeartDiseaseorAttack']  
- 
-![png](output_123_0.png)
-    
-![png](output_123_1.png)
-
-    
-![png](output_123_2.png)
-    
-
-
-
-# Low importance Features 
-**SeX**
-- For females SHAP values are negative or closer to zero, indicating that being female decreases model's predicted risk.
-- For males, SHAP values are positive, indicating that being male increases the predicted risk.
-- Feature Interaction: The presence of both blue and pink points indicates a secondary feature has minimal modulation on the influence of Sex.
-
-**MentHlth**
-- As MentHlth increases (worse mental health), SHAP values become more negative, reduced risk for predictions.
-- Interaction:Blue  dominates at lower MentHlth values while Pink appears more often at higher MentHlth values, and maybe amplifying the effect.
-
-**Education**
-- Lower Education levels correspond to higher positive SHAP values, and contributes to increased risk.
-- Higher Education levels reduces SHAP values, suggesting a protective effect.
-- Interaction:Blue dominates at higher Education levels, reinforcing the protective effect while Pink is more visible at lower Education levels, indicating  a stronger negative impact when education is low and the interacting feature is high.
-
-**Healthy_Eating_Score**
-- Lower Healthy_Eating_Score (SHAP values are higher) indicates poor eating habits suggesting poor eating habits increase risk.
-- Higher Healthy_Eating_Score (lower SHAP values)indicating a reduced risk.
-- Interaction: Blue points dominate at score = 1, reinforcing its protective nature while Pink is more evident at lower scores, amplifying the negative impact of unhealthy eating.
-
-**Lifestyle_score**
-- Higher Lifestyle_score (indicating a more detrimental lifestyle) corresponds to more negative SHAP values, indicating an increased negative effect on the prediction.
-- Interaction:Blue points dominate at lower Lifestyle_score levels, suggesting a weaker influence.However, pink points become prominent at higher scores, suggesting  increase impact when combined with high values of the interacting feature.
-
-**Health_AccessEngagement_Score**
-- Lower scores means poor access/engagement with healthcare and correspond to more negative SHAP values,and increased contribution to risk.
-- Higher scores have minimal SHAP contributions, suggesting better healthcare access is less predictive.
- - Interaction:Blue dominates at higher scores,  less predictive .Pink becomes more evident at lower scores, amplifying the feature's negative impact.
+![alt text](image-6.png)
+![alt text](image-7.png)
+![alt text](image-8.png)
 
 #  Key Findings from SHAP Analysis
 
@@ -557,13 +452,11 @@ See the full analysis in the Jupyter Notebook or review the presentation.
 
 
 Project_directory
- ├Data
 
- .gitignore 
-
- ipynb
-
- Presentation.pptx 
+data
+.gitignore
+MVP.ipynb
+presentation.pdf
+readme.md
  
-  README.md
 
