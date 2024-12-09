@@ -1,5 +1,6 @@
 # Hanover Diabetes Education and Engagement Program: Predictions for Prevention and Intervention
-![image.png](attachment:image.png)!
+![image](https://github.com/user-attachments/assets/495e5406-9cdc-488e-9697-022c503e54f5)
+
 Final Project Submission
 
 Author: Deon durrant
@@ -98,7 +99,8 @@ Descriptive Statistics
 
 **Demographic distribution**
     
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/13047abe-727e-4c37-a445-99147759d58b)
+
 ## Demographic distribution
 - Age: Age ranges from 18-80 years with he highest frequency appears around the central bins range 8 - 10, highest peak reflecting a strong concentration of individuals 55-69 years old.
 - Gender: There is a  slight gender imbalance in datasets with women outnumbering men 56% to 44%
@@ -107,7 +109,9 @@ Descriptive Statistics
 **Health indicators  distribution**
 
 # BMI Distribution
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/56e3d636-2194-4e64-aa5c-a23b0892d7e4)
+
+
 ## Health indicators distribution
 - BMI:The variable's right-skewed nature suggests potential outliers, most BMI falls bewteen 20-40. 
 - Smoker:   there are more Non-Smokers than Smokers in the dataset
@@ -117,8 +121,8 @@ Descriptive Statistics
 
 ## Diabetes  distribution**
 
-![alt text](image-1.png)
-    
+![image](https://github.com/user-attachments/assets/0937f903-1189-4e68-bc24-7d8e2feea80e)
+
 **Diabetes distribution analysis**
 The dataset reveals a significant class imbalance in the Diabetes_012 variable:
 - **213703 instanced labeled "0"** (non-diabetic)  dominate the data
@@ -183,7 +187,8 @@ This table showcases the distribution of diabetes status (`Diabetes_012`) across
 - At education level 1.0, 27.0% are Diabetic, dropping to 9.6% at level 6.0.. 
 
 # Features correlation analysis
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/24940863-f2b7-4658-98eb-c8484cacc6bb)
+
 ## **Features Correlation Analysis**
 - Notable Positive Correlations: highBp & HighCchol, age 
 - Notable Negative Correlations:genHlth income education
@@ -320,18 +325,15 @@ The observed maximum discrepancies are extremely small, confirming high fidelity
 
 
 # Display feature importance 
+    
+![image](https://github.com/user-attachments/assets/74c1b425-e161-46d5-b7bd-72a5464a86ce)
 
     
-![alt text](image-4.png)
-    
-  
-
 Beeswarm plot  to display the information-dense summary of how the top features in the  dataset impact the model’s output
 
-    
-![alt text](image-5.png)
-    
+![image](https://github.com/user-attachments/assets/e8d2b42b-6ce2-4beb-95c2-917cdb6c3c31)
 
+  
 ## Analysis
 Feature Importance Order: Comorbid_rating, OverallHealth_Score, and BMI are the top contributors to the model's predictions
 
@@ -357,9 +359,11 @@ Lifestyle_score, Health_AccessEngagement_Score, and HeartDiseaseorAttack have sm
 
  SHAP dependence plots to explore interactions between high importance,moderate importance  and low importance features. 
 
-![alt text](image-6.png)
-![alt text](image-7.png)
-![alt text](image-8.png)
+![image](https://github.com/user-attachments/assets/490b06ab-c2f9-4f7b-afb2-25ca464d0d44)
+
+![image](https://github.com/user-attachments/assets/960b4d11-cd7e-4935-9199-e9ff9245e8ae)
+
+![image](https://github.com/user-attachments/assets/2dca7dac-22c1-4d35-8e90-3b9bb379e994)
 
 #  Key Findings from SHAP Analysis
 
