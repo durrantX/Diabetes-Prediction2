@@ -1,5 +1,6 @@
 # Hanover Diabetes Education and Engagement Program: Predictions for Prevention and Intervention
-![image.png](attachment:image.png)!
+![alt text](image-9.png)
+
 Final Project Submission
 
 Author: Deon durrant
@@ -98,7 +99,7 @@ Descriptive Statistics
 
 **Demographic distribution**
     
-![alt text](image.png)
+
 ## Demographic distribution
 - Age: Age ranges from 18-80 years with he highest frequency appears around the central bins range 8 - 10, highest peak reflecting a strong concentration of individuals 55-69 years old.
 - Gender: There is a  slight gender imbalance in datasets with women outnumbering men 56% to 44%
@@ -117,7 +118,7 @@ Descriptive Statistics
 
 ## Diabetes  distribution**
 
-![alt text](image-1.png)
+![alt text](image.png)
     
 **Diabetes distribution analysis**
 The dataset reveals a significant class imbalance in the Diabetes_012 variable:
