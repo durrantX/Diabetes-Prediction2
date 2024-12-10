@@ -469,10 +469,16 @@ See the full analysis in the Jupyter Notebook or review the presentation.
 
 Project_directory
 
-data
-.gitignore
-MVP.ipynb
-presentation.pdf
-readme.md
+**data**
+
+**images**
+
+**.gitignore**
+
+**MVP.ipynb**
+
+**presentation.pdf**
+
+**readme.md**
  
 
