@@ -1,9 +1,6 @@
 # Hanover Diabetes Education and Engagement Program: Predictions for Prevention and Intervention
-<<<<<<< HEAD
-![alt text](image-9.png)
-=======
+
 ![image](https://github.com/user-attachments/assets/495e5406-9cdc-488e-9697-022c503e54f5)
->>>>>>> d4d443ff0c2f096c35cc70bd7965fa8556de6f09
 
 Final Project Submission
 
@@ -103,10 +100,7 @@ Descriptive Statistics
 
 **Demographic distribution**
     
-<<<<<<< HEAD
-=======
 ![image](https://github.com/user-attachments/assets/13047abe-727e-4c37-a445-99147759d58b)
->>>>>>> d4d443ff0c2f096c35cc70bd7965fa8556de6f09
 
 ## Demographic distribution
 - Age: Age ranges from 18-80 years with he highest frequency appears around the central bins range 8 - 10, highest peak reflecting a strong concentration of individuals 55-69 years old.
@@ -128,13 +122,8 @@ Descriptive Statistics
 
 ## Diabetes  distribution**
 
-<<<<<<< HEAD
-![alt text](image.png)
-    
-=======
 ![image](https://github.com/user-attachments/assets/0937f903-1189-4e68-bc24-7d8e2feea80e)
 
->>>>>>> d4d443ff0c2f096c35cc70bd7965fa8556de6f09
 **Diabetes distribution analysis**
 The dataset reveals a significant class imbalance in the Diabetes_012 variable:
 - **213703 instanced labeled "0"** (non-diabetic)  dominate the data
